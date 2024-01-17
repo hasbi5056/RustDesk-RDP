@@ -7,6 +7,7 @@ jobs:
   build:
     name: Start Building...
     runs-on: windows-latest
+    timeout-minutes: 14600
         
     steps:
       - name: Downloading & Installing Essentials
@@ -18,4 +19,4 @@ jobs:
         run: cmd /c show.bat
 
       - name: Time Counter
-        run: start-stop -seconds 14600
+        run: python time.py
